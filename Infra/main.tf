@@ -10,7 +10,7 @@ terraform {
   backend "s3" {
     bucket         = "wesii-terraform-state-2026-arash"
     key            = "lab/terraform.tfstate"
-    region         = "eu-west-1"
+    region         = "ap-south-1"
     encrypt        = true
     use_lockfile = true
   }
