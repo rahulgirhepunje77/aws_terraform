@@ -22,7 +22,11 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        checkout scm
+        // If your Jenkins job is not configured with SCM, use explicit Git checkout:
+        git branch: 'main', url: 'https://github.com/your-org/your-repo.git', credentialsId: 'github-creds'
+
+        // If the job is configured with SCM, you can keep checkout scm instead:
+        // checkout scm
       }
     }
 
